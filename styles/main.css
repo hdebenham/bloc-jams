@@ -30,6 +30,15 @@ body {
     max-width: 64rem;
 }
 
+.clearfix::after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+    
+}
+
 /******* Media Queries *******/
 
 @media (min-width: 640px) {
