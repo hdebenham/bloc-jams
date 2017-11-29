@@ -133,14 +133,14 @@ var setCurrentAlbum = function(album) {
 var filterTimeCode = function(timeInSeconds) {
     var time = parseFloat(timeInSeconds);
     
-    var timer = buzz.toTimer(time);
+    //var timer = buzz.toTimer(time);
     
-    return timer;
+    //return timer;
     
-    //var wholeMinutes = Math.floor(time);
-    //var wholeSeconds = time - wholeMinutes;
+    var seconds = "0" + Math.floor(time % 60);
+    var minutes = Math.floor(timeInSeconds / 60);
     
-    //return wholeMinutes + ":" + wholeSeconds;
+    return minutes + ":" + seconds.slice(-2);
 }
 
 var setCurrentTimeInPlayerBar = function(currentTime) {
